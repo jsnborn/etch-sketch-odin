@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch A Sketch</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p class="instructions">
+        Instructions: Use your mouse to draw, choose any color or grid size, and shake to start over! Have fun! 😊
+      </p>
+    <div class="etch-a-sketch">
+      <!-- Etch A Sketch Logo -->
+      <div class="logo">
+        <span class="magic">MAGIC</span>
+        <span class="etch-logo">Etch A Sketch</span>
+        <span class="screen-text">SCREEN</span>
+      </div>
+
+      <!-- Drawing Area (Screen) -->
+      <div class="screen">
+        <div id="grid"></div>
+      </div>
+
+      <!-- Control Knobs -->
+      <div class="knobs">
+        <div class="knob left-knob"></div>
+        <div class="knob right-knob"></div>
+      </div>
+    </div>
+
+    <!-- Controls Outside the Red Border (Color, Grid Size, Reset) -->
+    <div class="controls">
+      <label for="colorPicker">Color:</label>
+      <input type="color" id="colorPicker" value="#000000" />
+
+      <label for="gridSize">Grid Size:</label>
+      <input type="range" id="gridSize" min="4" max="72" value="64" />
+      <span id="gridSizeValue">64</span>
+
+      <button id="resetBtn">Shake!</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
